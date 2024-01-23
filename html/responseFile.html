@@ -7,13 +7,35 @@
 <link rel="stylesheet" href="" id="basePathLink">
 </head>
 <body>
-	<h2>Response for the given details</h2>
-	<p>You can download your response here</p>
+	<h2>ఇచ్చిన వివరాలకు ప్రతిస్పందన</h2>
+	<script>
+        var fullName = localStorage.getItem('fullName');
+        var dobYear = localStorage.getItem('dobYear');
+        var gender = localStorage.getItem('gender');
+        var hours = localStorage.getItem('hours');
+        var minutes = localStorage.getItem('minutes');
+        var seconds = localStorage.getItem('seconds');
+        var timeZone = localStorage.getItem('timeZone');
+        var locationOfBirth = localStorage.getItem('locationOfBirth');
+        
+        
+
+        document.write('<p>పూర్తి పేరు: ' + fullName + '</p>');
+        document.write('<p>పుట్టిన తేది: ' + dobYear + '</p>');
+        document.write('<p>లింగం: ' + gender + '</p>');
+        document.write('<p>గం: ' + hours + '</p>');
+        document.write('<p>ని: ' + minutes + '</p>');
+        document.write('<p>సెకన్లు: ' + seconds + '</p>');
+        document.write('<p>సమయమండలం: ' + timeZone + '</p>');
+        document.write('<p>పుట్టిన ప్రదేశం: ' + locationOfBirth + '</p>');
+
+        localStorage.clear();
+    </script>
 	
 	<script>
         const basePath = window.location.href.replace(/\/[^/]*$/, '/');
         const cssRef = document.getElementById('basePathLink');
-        cssRef.href = basePath + '../css/inputForm.css';
+        cssRef.href = basePath + '../css/responseFile.css';
     </script>
 </body>
 </html>
