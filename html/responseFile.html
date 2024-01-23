@@ -4,10 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Input Form</title>
-<link rel="stylesheet" href="\Indira\Jothishya\public\css\inputForm.css">
+<link rel="stylesheet" href="" id="basePathLink">
 </head>
 <body>
 	<h2>Response for the given details</h2>
 	<p>You can download your response here</p>
+	
+	<script>
+        const basePath = window.location.href.replace(/\/[^/]*$/, '/');
+        const cssRef = document.getElementById('basePathLink');
+        cssRef.href = basePath + '../css/inputForm.css';
+    </script>
 </body>
 </html>
